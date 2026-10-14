@@ -1,0 +1,40 @@
+{
+  "document_filename": "sample_newsletter.pdf",
+  "questions": [
+    {
+      "question": "What is DataSync Pro and when does it launch?",
+      "expected_page": 1,
+      "expected_answer_facts": ["DataSync Pro", "November 1, 2026"]
+    },
+    {
+      "question": "How much did revenue grow in Q3 2026?",
+      "expected_page": 2,
+      "expected_answer_facts": ["23%", "$4.2 million"]
+    },
+    {
+      "question": "What risk is mentioned regarding open-source competitors?",
+      "expected_page": 3,
+      "expected_answer_facts": ["open-source", "pricing"]
+    },
+    {
+      "question": "Who is responsible for the CloudNet reseller agreement and by when?",
+      "expected_page": 4,
+      "expected_answer_facts": ["Maria Chen", "Q4 2026"]
+    },
+    {
+      "question": "What is the active customer base size this quarter?",
+      "expected_page": 2,
+      "expected_answer_facts": ["1,200"]
+    },
+    {
+      "question": "What operational risk is tied to the company's cloud provider?",
+      "expected_page": 3,
+      "expected_answer_facts": ["AWS", "single cloud provider"]
+    },
+    {
+      "question": "By when must the DataSync Pro security audit be completed?",
+      "expected_page": 4,
+      "expected_answer_facts": ["November 15, 2026"]
+    }
+  ]
+}

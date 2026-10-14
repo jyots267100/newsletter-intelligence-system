@@ -1,0 +1,44 @@
+# Minimum-version pins (not exact ==) are used deliberately: exact pins
+# chosen at write-time fight pip's resolver against whatever has shipped
+# on PyPI since, causing slow/failing backtracking for transitive deps
+# (langsmith, httpx, etc.) that this project doesn't call directly. A
+# lower bound is enough to guarantee the APIs this code relies on exist.
+
+# --- Web framework ----------------------------------------------------------
+fastapi>=0.115.6
+uvicorn[standard]>=0.34.0
+python-multipart>=0.0.20
+
+# --- Validation / config --------------------------------------------------
+pydantic>=2.10.4
+pydantic-settings>=2.7.1
+
+# --- Gemini (official Google GenAI SDK) -------------------------------------
+google-genai>=1.3.0
+
+# --- PDF parsing --------------------------------------------------------
+pymupdf>=1.25.1
+
+# --- Embeddings -----------------------------------------------------------
+sentence-transformers>=3.3.1
+
+# --- Vector store -----------------------------------------------------
+chromadb>=0.5.23
+
+# --- Keyword retrieval ------------------------------------------------------
+rank-bm25>=0.2.2
+
+# --- UI -----------------------------------------------------------------
+streamlit>=1.41.1
+requests>=2.32.3
+
+# --- Utilities --------------------------------------------------------------
+python-dotenv>=1.0.1
+tenacity>=9.0.0
+
+# --- Testing --------------------------------------------------------------
+# No pytest-mock/pytest-asyncio: tests use unittest.mock directly and all
+# routes/tests are synchronous, so neither is actually needed.
+pytest>=8.3.4
+httpx>=0.28.1
+reportlab>=4.2.5
